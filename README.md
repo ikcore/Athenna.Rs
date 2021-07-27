@@ -2,7 +2,7 @@
 Cross platform - cross language performance neural net designed to be embedded into code-bases
 
 See example 
-[Conman Repo](https://github.com/ikcore/Athenna.Rs "Athenna Repository")
+[Athenna Repo](https://github.com/ikcore/Athenna.Rs "Athenna Repository")
 
 ```Rust
 use athenna::nn::*;
