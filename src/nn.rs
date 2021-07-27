@@ -302,31 +302,11 @@ impl Athenna {
 				},
 				_ => {
 					match label_idx {
-						2 => {
-							if content != "" {
-								layers.push(content.parse::<usize>().unwrap());
-							}
-						},
-						3 => {
-							if content != "" {
-								activations.push(string_to_activation(content));
-							}	
-						},
-						4 => {
-							if content != "" {
-								weights.push(content.parse::<f32>().unwrap());
-							}
-						},
-						5 => {
-							if content != "" {
-								biases.push(content.parse::<f32>().unwrap());
-							}
-						},
-						6 => {
-							if content != "" {
-								nn.learning_rate = content.parse::<f32>().unwrap();
-							}
-						}
+						2 => { layers.push(content.parse::<usize>().unwrap()); },
+						3 => { activations.push(string_to_activation(content)); },
+						4 => { weights.push(content.parse::<f32>().unwrap()); },
+						5 => { biases.push(content.parse::<f32>().unwrap()); },
+						6 => { nn.learning_rate = content.parse::<f32>().unwrap(); }
 						_ => {}
 					}
 				}
