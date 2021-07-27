@@ -1,0 +1,1 @@
+C:\Projects\Athenna.Rs\example\target\debug\example.exe: C:\Projects\Athenna.Rs\example\src\main.rs C:\Projects\Athenna.Rs\src\activations.rs C:\Projects\Athenna.Rs\src\lib.rs C:\Projects\Athenna.Rs\src\nn.rs

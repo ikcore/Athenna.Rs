@@ -1,10 +1,3 @@
-# Athenna.Rs
-Cross platform - cross language performance neural net designed to be embedded into code-bases
-
-See example 
-[Conman Repo](https://github.com/ikcore/Athenna.Rs "Athenna Repository")
-
-```Rust
 use athenna::nn::*;
 use athenna::activations::*;
 
@@ -24,8 +17,7 @@ fn main() {
 	// this model will overfit as there is only one set of data
   for i in 0..1000 {
     if i % 100 == 0 {
-      // helps not get stuck in local minima!
-      nn.mutate(7, 0.0001);
+      nn.mutate(4, 0.0001);
     }
     nn.back_propagate(x, y);
   }
@@ -37,4 +29,3 @@ fn main() {
   let w = nn.feed_forward(x);
   println!("check reloaded nn matches : {} {} {}", nn.cost, w[0], w[1], w[2]);
 }
-```
