@@ -3,6 +3,8 @@ name = "athenna"
 version = "0.1.0"
 authors = ["ikcore"]
 edition = "2018"
+license = "GPUv3"
+description = "Athenna is a light weight highly performant neural net framework for creating and using AI's cross platform and language"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
