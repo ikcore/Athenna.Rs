@@ -104,7 +104,7 @@ impl Athenna {
 		for i in 0..inputs.len() {
 			self.neurons[0][i] = inputs[i];
 		}
-		for i in 1..inputs.len() {
+		for i in 1..self.layers.len() {
 			let layer_idx = i - 1;
 
 			for j in 0..self.layers[i] {

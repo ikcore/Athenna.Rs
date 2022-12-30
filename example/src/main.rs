@@ -27,5 +27,5 @@ fn main() {
 
   let mut nn = Athenna::load(test_file).unwrap();
   let w = nn.feed_forward(x);
-  println!("check reloaded nn matches : {} {} {}", nn.cost, w[0], w[1], w[2]);
+  println!("check reloaded nn matches : {} | {} {} {}", nn.cost, w[0], w[1], w[2]);
 }
