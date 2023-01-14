@@ -15,7 +15,6 @@ pub struct Athenna {
 }
 
 impl Athenna {
-
 	pub fn new(layers:Vec<usize>, activations:Vec<Activations>) -> Athenna
 	{
 		let mut nn = Athenna {
@@ -34,7 +33,6 @@ impl Athenna {
 
 		return nn;
 	}
-
 	pub fn init_neurons(&mut self)
 	{
 		self.neurons = Vec::new();
@@ -43,7 +41,6 @@ impl Athenna {
 			self.neurons.push(neurons);
 		}
 	}
-
 	pub fn init_biases(&mut self)
 	{
 		let mut rng = rand::thread_rng();
@@ -58,7 +55,6 @@ impl Athenna {
 			self.biases.push(bias);
 		}
 	}
-
 	pub fn init_weights(&mut self)
 	{
 		let mut rng = rand::thread_rng();
@@ -77,7 +73,6 @@ impl Athenna {
 			self.weights.push(layer_weights);
 		}
 	}
-
 	pub fn activate(&self, x:f32, layer_id: usize) -> f32 {
 		match self.activations[layer_id] {
 			Activations::Sigmoid => sigmoid(x),
@@ -88,7 +83,6 @@ impl Athenna {
 			_ => x
 		}
 	}
-
 	pub fn activate_deriv(&self, x:f32, layer_id: usize) -> f32 {
 		match self.activations[layer_id] {
 			Activations::Sigmoid => sigmoid_deriv(x),
@@ -99,7 +93,6 @@ impl Athenna {
 			_ => x
 		}
 	}
-
 	pub fn feed_forward(&mut self, inputs:&Vec<f32>) -> Vec<f32> {
 		for i in 0..inputs.len() {
 			self.neurons[0][i] = inputs[i];
