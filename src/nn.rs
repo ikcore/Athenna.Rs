@@ -13,7 +13,6 @@ pub struct Athenna {
 	pub learning_rate: f32,
 	pub cost: f32
 }
-
 impl Athenna {
 	pub fn new(layers:Vec<usize>, activations:Vec<Activations>) -> Athenna
 	{
